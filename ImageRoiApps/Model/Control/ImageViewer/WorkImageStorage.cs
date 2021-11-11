@@ -15,8 +15,8 @@ namespace ClipXmlReader.Model.Control.ImageViewer
     public class WorkImageStorage
     {
 
-        protected Bitmap _baseimage = null;
-        public Bitmap BaseImage
+        protected BitmapImage _baseimage = null;
+        public BitmapImage BaseImage
         {
             get
             {
@@ -27,13 +27,14 @@ namespace ClipXmlReader.Model.Control.ImageViewer
 
         public void LoadImage(string filepath)
         {
+            /*
             if (_baseimage != null)
             {
                 _baseimage.Dispose();
             }
+            */
 
-
-            _baseimage = new Bitmap(filepath);
+            _baseimage = new BitmapImage( new Uri(filepath));
         }
 
 

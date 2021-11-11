@@ -40,8 +40,8 @@ namespace ClipXmlReader.Model.Control.ImageViewer
             _storage_object = storage;
         }
 
-        Bitmap _holding_viewimage;
-        public Image HoldingViewImage
+        BitmapImage _holding_viewimage;
+        public BitmapImage HoldingViewImage
         {
             get
             {

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:bh="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:local="clr-namespace:ClipXmlReader.ViewModel"
              xmlns:refctrl ="clr-namespace:ClipXmlReader.View"
              x:Class="ClipXmlReader.View.ImageViewerGui" 
@@ -84,18 +84,18 @@
             </Grid.ColumnDefinitions>
 
             <ScrollViewer x:Name="ui_scrollviewer_horzguide" Grid.Row="0" Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" Grid.ColumnSpan="3" ScrollChanged="ui_scrollviewer_horzguide_ScrollChanged"  >
-                <i:Interaction.Behaviors>
+                <bh:Interaction.Behaviors>
                     <b:ScrollSyncronizingBehavior ScrollGroup="Group1" Orientation="Horizontal" />
-                </i:Interaction.Behaviors>
+                </bh:Interaction.Behaviors>
                 <DockPanel Width="{Binding ActualWidth, ElementName=ImageBox}">
                     <refctrl:ImageHorizontalScaler x:Name="ui_HorizontalScalar" Margin="0,0,0,0" Width="auto" DockPanel.Dock="Top" DataContext="{Binding ViewModelHorizontalImageScaler}" />
                 </DockPanel>
             </ScrollViewer>
 
             <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden" >
-                <i:Interaction.Behaviors>
+                <bh:Interaction.Behaviors>
                     <b:ScrollSyncronizingBehavior ScrollGroup="Group2" Orientation="Vertical" />
-                </i:Interaction.Behaviors>
+                </bh:Interaction.Behaviors>
                 <DockPanel Height="{Binding ActualHeight, ElementName=ImageBox}">
                     <refctrl:ImageVerticalScaler x:Name="ui_VerticalScalar" MouseDown="ImageVerticalScaler_MouseDown" DataContext="{Binding ViewModelVerticalImageScaler}" />
                 </DockPanel>
@@ -115,10 +115,10 @@
                           Visibility="{Binding IsViewImageControl, Converter={StaticResource BoolVisibilityConverter}}"
                           >
 
-                <i:Interaction.Behaviors>
+                <bh:Interaction.Behaviors>
                     <b:ScrollSyncronizingBehavior ScrollGroup="Group1" Orientation="Horizontal" />
                     <b:ScrollSyncronizingBehavior ScrollGroup="Group2" Orientation="Vertical" />
-                </i:Interaction.Behaviors>
+                </bh:Interaction.Behaviors>
 
                 <!--
                 <i:Interaction.Triggers>
@@ -140,11 +140,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Canvas x:Name="CanvasBox" Width="{Binding ImageObject.ImageWidth}" Height="{Binding ImageObject.ImageHeight}" Margin="0,0,0,0" Grid.RowSpan="1" >
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="MouseMove">
-                                <i:InvokeCommandAction Command="{Binding ImageObject.MouseMoveCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
+                        <bh:Interaction.Triggers>
+                            <bh:EventTrigger EventName="MouseMove">
+                                <bh:InvokeCommandAction Command="{Binding ImageObject.MouseMoveCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
+                            </bh:EventTrigger>
+                        </bh:Interaction.Triggers>
 
                         <Image x:Name="ImageBox" Source="{Binding ImageObject.DisplayedImage}" Width="{Binding ImageObject.ImageWidth}" HorizontalAlignment="Left" VerticalAlignment="Top" 
                                Stretch="Uniform" DockPanel.Dock="Top" Canvas.Left="0" Canvas.Top="0">
@@ -168,14 +168,14 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Canvas x:Name="areacanvas" ContextMenuClosing="areacanvas_ContextMenuClosing" >
-                                        <i:Interaction.Triggers>
-                                            <i:EventTrigger EventName="MouseLeftButtonDown">
-                                                <i:InvokeCommandAction Command="{Binding MousePushCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
-                                            </i:EventTrigger>
-                                            <i:EventTrigger EventName="MouseLeftButtonUp">
-                                                <i:InvokeCommandAction Command="{Binding MouseReleaseCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
-                                            </i:EventTrigger>
-                                        </i:Interaction.Triggers>
+                                        <bh:Interaction.Triggers>
+                                            <bh:EventTrigger EventName="MouseLeftButtonDown">
+                                                <bh:InvokeCommandAction Command="{Binding MousePushCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
+                                            </bh:EventTrigger>
+                                            <bh:EventTrigger EventName="MouseLeftButtonUp">
+                                                <bh:InvokeCommandAction Command="{Binding MouseReleaseCommand}" CommandParameter="{Binding ElementName=areacanvas}" />
+                                            </bh:EventTrigger>
+                                        </bh:Interaction.Triggers>
 
                                         <Canvas.InputBindings>
                                             <MouseBinding Gesture="RightClick" Command="{Binding RightClickCommand}" />
