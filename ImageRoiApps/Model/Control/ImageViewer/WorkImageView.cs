@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 namespace ClipXmlReader.Model.Control.ImageViewer
 {
 
-    
+
     public class WorkImageView
     {
 
@@ -40,6 +40,8 @@ namespace ClipXmlReader.Model.Control.ImageViewer
             _storage_object = storage;
         }
 
+
+#if NETFRAMEWORK
         Bitmap _holding_viewimage;
         public Image HoldingViewImage
         {
@@ -49,6 +51,7 @@ namespace ClipXmlReader.Model.Control.ImageViewer
             }
         }
 
+        
         public BitmapSource HoldingViewImageSource
         {
             get
@@ -62,9 +65,31 @@ namespace ClipXmlReader.Model.Control.ImageViewer
                 return imagesource;
             }
         }
+#else
+        BitmapImage _holding_viewimage;
+        public BitmapImage HoldingViewImage
+        {
+            get
+            {
+                return _holding_viewimage;
+            }
+        }
+
+
+        public BitmapSource HoldingViewImageSource
+        {
+            get
+            {
+                return null;
+            }
+        }
+#endif
+
 
         public void ResampleViewImage(double rate)
         {
+
+#if NETFRAMEWORK
             if( _holding_viewimage != null)
             {
                 _holding_viewimage.Dispose();
@@ -81,6 +106,9 @@ namespace ClipXmlReader.Model.Control.ImageViewer
             g.DrawImage(_storage_object.BaseImage, 0, 0, width, height);
             g.Dispose();
             _holding_viewimage = newbitmap;
+#else
+
+#endif
         }
     }
 }

@@ -102,6 +102,7 @@ namespace ClipXmlReader.Model.IO.Recipes
             if (!System.IO.File.Exists(FilterTemplatePath)) return;
             if (!System.IO.File.Exists(MachineTemplatePath)) return;
 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             using (System.IO.StreamReader reader = new System.IO.StreamReader(MeasureTemplatePath, System.Text.Encoding.GetEncoding("Shift_jis")))
             {

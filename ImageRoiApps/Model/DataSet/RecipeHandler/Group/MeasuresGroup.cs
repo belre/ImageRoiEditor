@@ -189,7 +189,11 @@ namespace ClipXmlReader.Model.DataSet.RecipeHandler.Group
             singletonobj.ClearCoordinate();
 
             // 機種情報の登録
+#if NETFRAMEWORK
             singletonobj.SetMachineInfo( int.Parse(Properties.Resources.MachineID), RelationsObject);
+#else
+            singletonobj.SetMachineInfo(int.Parse(ImageRoiEditorNet6.Properties.ConfigNet6.MachineID), RelationsObject);
+#endif
 
 
             singletonobj.SetPrintingOffset((float)AllOffsetX, (float)AllOffsetY);

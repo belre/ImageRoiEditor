@@ -252,6 +252,8 @@ namespace ClipXmlReader.ViewModel.ImageViewer
         {
             get
             {
+
+#if NETFRAMEWORK
                 int bitCount = System.Drawing.Bitmap.GetPixelFormatSize(System.Drawing.Imaging.PixelFormat.Format32bppArgb) / 8;
 
                 // ピクセルデータをコピー
@@ -301,6 +303,9 @@ namespace ClipXmlReader.ViewModel.ImageViewer
 
 
                 return imagesource;
+#else
+                return null;
+#endif
             }
         }
 
@@ -308,6 +313,7 @@ namespace ClipXmlReader.ViewModel.ImageViewer
         {
             get
             {
+#if NETFRAMEWORK
                 int bitCount = System.Drawing.Bitmap.GetPixelFormatSize(System.Drawing.Imaging.PixelFormat.Format32bppArgb) / 8;
 
                 // ピクセルデータをコピー
@@ -337,6 +343,9 @@ namespace ClipXmlReader.ViewModel.ImageViewer
 
 
                 return imagesource;
+#else
+                return null;
+#endif
             }
         }
 
