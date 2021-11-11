@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<Measures xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Measure ID="1">
+    <Label>座標点</Label>
+    <ResultName>X</ResultName>
+    <ResultName>Y</ResultName>
+    <MinimumRegionNumber>1</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>2</RegionID>
+    <RegionID>4</RegionID>
+    <Result-default>
+      <ResultName>X</ResultName>
+      <DefaultValidFig>-2</DefaultValidFig>
+      <DefaultUnit>mm</DefaultUnit>
+      <DefaultLower>100</DefaultLower>
+      <DefaultUpper>200</DefaultUpper>
+    </Result-default>
+    <Result-default>
+      <ResultName>Y</ResultName>
+      <DefaultValidFig>-2</DefaultValidFig>
+      <DefaultUnit>mm</DefaultUnit>
+      <DefaultLower>100</DefaultLower>
+      <DefaultUpper>200</DefaultUpper>
+    </Result-default>
+    <AutoCoordCalculationMode>NONE</AutoCoordCalculationMode>
+  </Measure>
+  <Measure ID="2">
+    <Label>距離</Label>
+    <ResultName>長さ</ResultName>
+    <MinimumRegionNumber>2</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>1</RegionID>
+    <RegionID>2</RegionID>
+    <RegionID>3</RegionID>
+    <RegionID>4</RegionID>
+    <AutoCoordCalculationMode>NONE</AutoCoordCalculationMode>
+  </Measure>
+  <Measure ID="11">
+    <Label>ピッチ</Label>
+    <ResultName>平均</ResultName>
+    <ResultName>差</ResultName>
+    <ResultName>6σ</ResultName>
+    <MinimumRegionNumber>1</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>7</RegionID>
+    <AutoCoordCalculationMode>NONE</AutoCoordCalculationMode>
+    <Result-default>
+      <ResultName>平均</ResultName>
+      <DefaultValidFig>-2</DefaultValidFig>
+      <DefaultUnit>mm</DefaultUnit>
+      <DefaultLower>100</DefaultLower>
+      <DefaultUpper>200</DefaultUpper>
+    </Result-default>
+    <Result-default>
+      <ResultName>差</ResultName>
+      <DefaultValidFig>-2</DefaultValidFig>
+      <DefaultUnit>mm</DefaultUnit>
+      <DefaultLower>100</DefaultLower>
+      <DefaultUpper>200</DefaultUpper>
+    </Result-default>
+    <Result-default>
+      <ResultName>6σ</ResultName>
+      <DefaultValidFig>-2</DefaultValidFig>
+      <DefaultUnit>mm</DefaultUnit>
+      <DefaultLower>100</DefaultLower>
+      <DefaultUpper>200</DefaultUpper>
+    </Result-default>
+  </Measure>
+  <Measure ID="12">
+    <Label>濃度</Label>
+    <ResultName>平均</ResultName>
+    <ResultName>差</ResultName>
+    <ResultName>6σ</ResultName>
+    <MinimumRegionNumber>1</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>8</RegionID>
+    <AutoCoordCalculationMode>NONE</AutoCoordCalculationMode>
+  </Measure>
+  <Measure ID="14">
+    <Label>基準座標</Label>
+    <ResultName>原点X</ResultName>
+    <ResultName>原点Y</ResultName>
+    <ResultName>角度</ResultName>
+    <MinimumRegionNumber>1</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>10</RegionID>
+    <AutoCoordCalculationMode>COORD</AutoCoordCalculationMode>
+    <Measure-params>
+      <Label>CoordId</Label>
+      <Default xsi:type="xsd:int">0</Default>
+    </Measure-params>
+  </Measure>
+  <Measure ID="15">
+    <Label>基準座標3点</Label>
+    <ResultName>原点X</ResultName>
+    <ResultName>原点Y</ResultName>
+    <ResultName>角度</ResultName>
+    <MinimumRegionNumber>3</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <RegionID>1</RegionID>
+    <RegionID>2</RegionID>
+    <RegionID>3</RegionID>
+    <RegionID>4</RegionID>
+    <AutoCoordCalculationMode>COORD3</AutoCoordCalculationMode>
+    <Measure-params>
+      <Label>CoordId</Label>
+      <Default xsi:type="xsd:int">0</Default>
+    </Measure-params>
+    <Measure-params>
+      <Label>Dir</Label>
+      <Default xsi:type="xsd:int">0</Default>
+    </Measure-params>
+  </Measure>
+  <Measure ID="500">
+    <Label>スキャン</Label>
+    <MinimumRegionNumber>0</MinimumRegionNumber>
+    <RegionID>0</RegionID>
+    <AutoCoordCalculationMode>NONE</AutoCoordCalculationMode>
+    <Measure-params>
+      <Label>Format</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Measure-params>
+    <Measure-params>
+      <Label>Frame</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Measure-params>
+  </Measure>
+</Measures>

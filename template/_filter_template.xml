@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<Filters xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Filter ID="1">
+    <Label>ソース選択</Label>
+    <Filter-params>
+      <Label>Source</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Color</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="2">
+    <Label>2値化</Label>
+    <Filter-params>
+      <Label>Mode</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>ThreshA</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>ThreshB</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="3">
+    <Label>エロージョン</Label>
+    <Filter-params>
+      <Label>Num</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="4">
+    <Label>ダイレーション</Label>
+    <Filter-params>
+      <Label>Num</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="5">
+    <Label>エッジ抽出</Label>
+    <Filter-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Width</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="6">
+    <Label>差分画像</Label>
+    <Filter-params>
+      <Label>Source1</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Source2</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Color1</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Color2</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="7">
+    <Label>マスター差分画像</Label>
+    <Filter-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+    <Filter-params>
+      <Label>Outside</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="8">
+    <Label>マスク処理</Label>
+    <Filter-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="9">
+    <Label>オープニング</Label>
+    <Filter-params>
+      <Label>Num</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+  <Filter ID="10">
+    <Label>クロージング</Label>
+    <Filter-params>
+      <Label>Num</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Filter-params>
+  </Filter>
+</Filters>

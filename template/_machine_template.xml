@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<Machines xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Machine ID="0">
+  	<Name>編集ツールテスト用</Name>
+    <CapturedImageOffset>
+      <X>10</X>
+      <Y>9.1</Y>
+    </CapturedImageOffset>
+    <Resolution>
+      <X>0.02</X>
+      <Y>0.0198</Y>
+    </Resolution>
+  </Machine>
+</Machines>

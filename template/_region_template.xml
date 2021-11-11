@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<Regions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Region ID="0">
+    <Label>参照</Label>
+    <IsReference>true</IsReference>
+  </Region>
+  <Region ID="1">
+    <Label>直線検出</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>DetDir</Label>
+      <DisplayedLabel>検出方向2</DisplayedLabel>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="2">
+    <Label>クロスライン検出</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>SearchDirX</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchDirY</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="3">
+    <Label>エッジ</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>DetDir</Label>
+      <DisplayedLabel>検出方向</DisplayedLabel>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="4">
+    <Label>コーナーエッジ</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>DetDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="5">
+    <Label>円弧</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="6">
+    <Label>曲り</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>DetDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Length</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Interval</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>VirtualLine</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="7">
+    <Label>ピッチ</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>DetDir</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Interval</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>SearchRange</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Target</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="8">
+    <Label>濃度</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="9">
+    <Label>色相</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="10">
+    <Label>座標系</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>FormType</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="11">
+    <Label>文字</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="12">
+    <Label>バーコード</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="100">
+    <Label>バンド幅</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="101">
+    <Label>コーナー幅</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="102">
+    <Label>直線性</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="103">
+    <Label>粒子</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Feature</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="104">
+    <Label>レベル均一性</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="105">
+    <Label>パターンマッチング</Label>
+    <IsReference>false</IsReference>
+  </Region>
+  <Region ID="200">
+    <Label>マスターキャプチャー</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>Mode</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+  <Region ID="201">
+    <Label>マスターキャプチャー2</Label>
+    <IsReference>false</IsReference>
+    <Feature-params>
+      <Label>Mode</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Logic</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Thresh</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+    <Feature-params>
+      <Label>Filter</Label>
+      <Default xsi:type="xsd:decimal">0</Default>
+    </Feature-params>
+  </Region>
+</Regions>
