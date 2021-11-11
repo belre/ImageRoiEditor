@@ -126,14 +126,19 @@ namespace ClipXmlReader.ViewModel
 
 
             // タイトルの取得
+
+#if NETFRAMEWORK
             _title_foruse = _model_recipetemplate.XmlTemplate.Machines.MeasureDict[int.Parse(Properties.Resources.MachineID)].Name;
+#else
+            _title_foruse = _model_recipetemplate.XmlTemplate.Machines.MeasureDict[int.Parse(ImageRoiEditorNet6.Properties.ConfigNet6.MachineID)].Name;
+#endif
 
             ViewModelImageViewerGui = new ImageViewerGuiViewModel(this, _model_workspace);
             //ContextImageViewer = new DataContext.ImageViewerGuiParameter();
         }
-        #endregion
+#endregion
 
-        #region [Init]
+#region [Init]
         protected string _title_foruse = "";
         public string DialogTitle
         {
@@ -142,11 +147,11 @@ namespace ClipXmlReader.ViewModel
                 return "Clip XML Editor (" + _title_foruse + ")";
             }
         }
-        #endregion
+#endregion
 
-        #region [ (GUI) Ribbon, Menu]
+#region [ (GUI) Ribbon, Menu]
 
-        #region [Property]
+#region [Property]
         public bool IsVisibleUserRibbonMenu
         {
             get
@@ -172,9 +177,9 @@ namespace ClipXmlReader.ViewModel
             }
         }
 
-        #endregion
+#endregion
 
-        #region [Command]
+#region [Command]
 
         private ICommand _command_switchmenupanel;
         public ICommand CommandSwitchMenuPanel
@@ -195,13 +200,13 @@ namespace ClipXmlReader.ViewModel
             }
         }
 
-        #endregion
+#endregion
 
-        #region [Notify]
+#region [Notify]
 
-        #endregion
+#endregion
 
-        #region [Command Method]
+#region [Command Method]
         private void SwitchMenuPanel(object param)
         {
             var status = (EMenuPanelStatus)param;
@@ -237,12 +242,12 @@ namespace ClipXmlReader.ViewModel
             RaisePropertyChanged("IsVisibleWorkspace");
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region [ (GUI) Data IO]
-        #region [Property]
+#region [ (GUI) Data IO]
+#region [Property]
 
         public string CurrentWorkspace
         {
@@ -298,9 +303,9 @@ namespace ClipXmlReader.ViewModel
         }
 
 
-        #endregion
+#endregion
 
-        #region [ Command ]
+#region [ Command ]
 
         private ICommand _command_switchworkspace;
         public ICommand CommandSwitchWorkspace
@@ -375,9 +380,9 @@ namespace ClipXmlReader.ViewModel
         }
 
 
-        #endregion
+#endregion
 
-        #region [ Command Method]
+#region [ Command Method]
 
         public void SwitchWorkspace(object param)
         {
@@ -540,14 +545,14 @@ namespace ClipXmlReader.ViewModel
             RaisePropertyChanged("BindRecipeItem");
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region [ (GUI) Recipe XML Table]
+#region [ (GUI) Recipe XML Table]
 
 
-        #region [Property]
+#region [Property]
   
         public string ErrorText
         {
@@ -689,9 +694,9 @@ namespace ClipXmlReader.ViewModel
         }
 
 
-        #endregion
+#endregion
 
-        #region [Property (DataSet)]
+#region [Property (DataSet)]
 
 
         public Model.DataSet.RecipeHandler.Group.MeasuresGroup CurrentDataSetList
@@ -1006,10 +1011,10 @@ namespace ClipXmlReader.ViewModel
 
 
 
-        #endregion
+#endregion
 
 
-        #region [Property (Viewing)]
+#region [Property (Viewing)]
         public string RecipeName
         {
             get
@@ -1033,9 +1038,9 @@ namespace ClipXmlReader.ViewModel
                 RaisePropertyChanged("RecipeName");
             }
         }
-        #endregion
+#endregion
 
-        #region [Command]
+#region [Command]
 
 
         private ICommand _command_changerecipeitemrow;
@@ -1047,13 +1052,13 @@ namespace ClipXmlReader.ViewModel
             }
         }
 
-        #endregion
+#endregion
 
-        #region [Notify]
+#region [Notify]
 
-        #endregion
+#endregion
 
-        #region [Command Method]
+#region [Command Method]
 
         public void ChangeRecipeItemRow(object param)
         {
@@ -1096,9 +1101,9 @@ namespace ClipXmlReader.ViewModel
             RaisePropertyChanged("IsEmptyBindResults");
         }
 
-        #endregion
+#endregion
 
-        #region [Utility]
+#region [Utility]
 
 
         public void RunDataGridCommand(Model.DataSet.RecipeHandler.Base.BaseTreeGroup target, Func<Model.DataSet.RecipeHandler.Base.BaseTreeGroup, Model.DataSet.RecipeHandler.Base.BaseTreeGroup, bool> func)
@@ -1132,11 +1137,11 @@ namespace ClipXmlReader.ViewModel
             }
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region [ (GUI) Auto Coordinate]
+#region [ (GUI) Auto Coordinate]
 
         private ICommand _command_autocoordinate;
         public ICommand CommandAutoCoordinate
@@ -1231,9 +1236,9 @@ namespace ClipXmlReader.ViewModel
 
         }
 
-        #endregion
+#endregion
 
-        #region [ (Hidden) Template]
+#region [ (Hidden) Template]
 
         private ICommand _command_makexmltable;
         public ICommand CommandMakeXmlTable
@@ -1250,7 +1255,7 @@ namespace ClipXmlReader.ViewModel
         }
 
 
-        #endregion
+#endregion
 
     }
 }

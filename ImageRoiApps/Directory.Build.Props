@@ -1,0 +1,5 @@
+<Project>
+ <PropertyGroup>
+    <BaseIntermediateOutputPath>obj-net6\$(AssemblyName)\</BaseIntermediateOutputPath>
+ </PropertyGroup>
+</Project>
